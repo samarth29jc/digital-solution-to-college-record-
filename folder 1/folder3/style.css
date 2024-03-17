@@ -1,0 +1,20 @@
+.container {
+  width: 80%;
+  margin: 20px auto;
+  overflow-x: auto;  /* Add horizontal scroll for wide tables */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}

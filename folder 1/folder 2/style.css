@@ -1,0 +1,67 @@
+.container {
+  width: 90%;
+  height: 100vh;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dropdown{
+  padding-bottom: 10px;
+}
+
+.button-container {
+  display: flex;     /* Change to flex */
+  flex-direction: column; /* Arrange buttons vertically */
+  align-items: center;  /* Center buttons horizontally */
+}
+
+.inventory-button {
+  padding: 15px 30px;  /* Increase padding for more space */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Add spacing between buttons */
+  min-width: 90vh;
+}
+/* ... other styles ... */
+
+.inventory-button {
+  position: relative; /* To position the box */
+}
+
+.inventory-button::after { 
+  content: attr(data-properties); /* Use the attribute as content */
+  background-color: #333;        
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  left: 110%; /* Position to the right of the button */
+  top: 50%;   
+  transform: translateY(-50%); /* Vertical adjustment */
+  opacity: 0;                 /* Hide initially */
+  transition: opacity 0.3s;    /* Add a transition */
+  white-space: nowrap;        /* Prevent wrapping of long text */
+}
+
+.inventory-button:hover::after {
+  opacity: 1;  /* Show on hover */
+}
+/* ... other styles ... */
+
+.count-box { 
+  background-color: #eee;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-left: 5px;
+  display: inline-block; /* Allow it to sit next to button text */
+}
+
+.fa-arrow-right { /* Style for the arrow (Assuming you use FontAwesome) */
+  margin-left: 5px; 
+} 
+
